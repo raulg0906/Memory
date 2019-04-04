@@ -9,24 +9,24 @@ class MemoryGame {
 
     shuffle(){
         var iconArr = [
-            `<i class="far fa-angry"></i>`,
-            `<i class="far fa-angry"></i>`,
-            `<i class="fas fa-battery-empty"></i>`,
-            `<i class="fas fa-battery-empty"></i>`,
-            `<i class="fas fa-atom"></i>`,
-            `<i class="fas fa-atom"></i>`,
-            `<i class="far fa-bell"></i>`,
-            `<i class="far fa-bell"></i>`,
-            `<i class="fas fa-bacon"></i>`,
-            `<i class="fas fa-bacon"></i>`,
-            `<i class="fab fa-battle-net"></i>`,
-            `<i class="fab fa-battle-net"></i>`,
-            `<i class="fas fa-car"></i>`,
-            `<i class="fas fa-car"></i>`,
-            `<i class="fas fa-cannabis"></i>`,
-            `<i class="fas fa-cannabis"></i>`,
-            `<i class="fas fa-child"></i>`,
-            `<i class="fas fa-child"></i>`
+            `<i class="hidden far fa-angry"></i>`,
+            `<i class="hidden far fa-angry"></i>`,
+            `<i class="hidden fas fa-battery-empty"></i>`,
+            `<i class="hidden fas fa-battery-empty"></i>`,
+            `<i class="hidden fas fa-atom"></i>`,
+            `<i class="hidden fas fa-atom"></i>`,
+            `<i class="hidden far fa-bell"></i>`,
+            `<i class="hidden far fa-bell"></i>`,
+            `<i class="hidden fas fa-bacon"></i>`,
+            `<i class="hidden fas fa-bacon"></i>`,
+            `<i class="hidden fab fa-battle-net"></i>`,
+            `<i class="hidden fab fa-battle-net"></i>`,
+            `<i class="hidden fas fa-car"></i>`,
+            `<i class="hidden fas fa-car"></i>`,
+            `<i class="hidden fas fa-cannabis"></i>`,
+            `<i class="hidden fas fa-cannabis"></i>`,
+            `<i class="hidden fas fa-child"></i>`,
+            `<i class="hidden fas fa-child"></i>`
         ];
         var iconArrLength = iconArr.length;
         var gameTilesString = '';

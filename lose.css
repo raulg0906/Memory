@@ -1,0 +1,45 @@
+html{
+    box-sizing: border-box;
+
+}
+
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+
+body{
+  margin: 0;
+  background: skyblue;
+ 
+}
+
+#youlose{
+    
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100vw;
+    height: 100vh;
+    font-size: 40px;
+}
+
+#youlose h2, #tryagain{
+
+    
+    align-self: center;
+}
+
+#tryagain a{
+   text-decoration: none;
+   color: black;
+}
+
+#tryagain{
+   
+    border: 3px black solid;
+    border-radius: 5px;
+    padding: 10px;
+    background: rgba( 0, 0, 255, 0.25);
+}
