@@ -44,10 +44,14 @@ body{
     justify-content: center;
     align-items: center;
 }
-.hidden{
+.hidden {
     color: transparent;
 }
 
-.matched{
-    
+.matched {
+    color: white !important;
+}
+
+i span {
+    display: none;
 }
