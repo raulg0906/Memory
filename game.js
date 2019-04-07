@@ -13,10 +13,15 @@ class MemoryGame {
             `<i class="fas fa-heart"></i>`,
             `<i class="fas fa-heart"></i>`
         ];
+        this._matches = 0;
     }
 
     get lives() {
         return this._lives;
+    }
+
+    successfulMatch() {
+        this._matches++;
     }
 
     loseLife() {
@@ -25,7 +30,7 @@ class MemoryGame {
             this.displayLife(-1);
         }
         else {
-            gameOver();
+            this.gameOver();
         }
     }
 
@@ -36,6 +41,14 @@ class MemoryGame {
         var lifeBarContainer = document.querySelector("#hearts");
         var lifeBarStr = this._lifeBarArr.join("");
         lifeBarContainer.innerHTML = lifeBarStr;
+    }
+
+    gameOver() {
+        alert("You lose!")
+    }
+
+    gameWin() {
+        alert("You won!")
     }
 
     shuffle() {
@@ -77,10 +90,13 @@ class MemoryGame {
     checkMatch(selection1, selection2) {
 
         if (selection1[0].innerHTML === selection2[0].innerHTML) {
+            this.successfulMatch();
             selection1.removeClass("selected");
             selection1.addClass("matched");
             selection2.removeClass("selected");
             selection2.addClass("matched");
+            var audio = new Audio("./assets/correct.wav")
+            audio.play()
         }
         else {
             this.loseLife();
@@ -90,10 +106,19 @@ class MemoryGame {
                 selection1.addClass("hidden");
                 selection2.addClass("hidden");
             }, 500);
+            var audio = new Audio("./assets/Wrong-answer-sound-effect.mp3")
+            audio.play()
+
         }
 
-        
+        this.checkWin();
 
+    }
+
+    checkWin() {
+        if (this._matches === 9) {
+            this.gameWin();
+        }
     }
 
 }
