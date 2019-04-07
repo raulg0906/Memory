@@ -43,12 +43,49 @@ class MemoryGame {
         lifeBarContainer.innerHTML = lifeBarStr;
     }
 
-    gameOver() {
-        alert("You lose!")
+    /* gameOver() {
+        if (confirm("You lose!  Try again?")) {
+            location.reload();
+        }
     }
 
     gameWin() {
-        alert("You won!")
+        if (confirm("You won!  Play again?")) {
+            location.reload();
+        }
+    } */
+
+    gameOver() {
+        var loseContainer = document.querySelector("#root");
+        loseContainer.innerHTML = `
+            <div id='youlose'>
+                <h2>YOU LOSE</h2>
+                <div id="tryagain">
+                    <a>TRY AGAIN</a>
+                </div>
+            </div>
+        `
+
+        $("#tryagain").on("click", function(){
+            location.reload();
+        })
+    }
+
+    gameWin() {
+        var winContainer = document.querySelector("#root");
+        winContainer.innerHTML = `
+            <div id='youwin'>
+                <h2>YOU WIN</h2>
+                <div id="playagain">
+                    <a href="index.html">PLAY AGAIN</a>
+                </div>
+            </div>
+        `
+
+        $("#playagain").on("click", function(){
+            location.reload();
+        })
+
     }
 
     shuffle() {
